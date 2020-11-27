@@ -1,0 +1,25 @@
+{
+    "name": "Solved.API",
+    "version": "1.0",
+    "description": "solved.ac를 더 풍성하게.",
+    "manifest_version": 2,
+    "author": "hibye1217",
+    "permissions": [
+        "*://*.acmicpc.net/*",
+        "*://*.solved.ac/*",
+        "tabs",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.acmicpc.net/*"
+            ],
+            "all_frames": true,
+            "js": [
+                "Script/main.js",
+                "Script/simple.js"
+            ]
+        }
+    ]
+}
